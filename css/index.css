@@ -1,0 +1,438 @@
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    text-transform:uppercase;
+    width:100%;
+}
+	.app {
+		width: 100%;
+		height: 100%;
+		position:absolute;             /* position in the center of the screen */
+	}
+	.page {width: 100%; height: 100%; position: absolute;}
+	#home { display: none;
+		background-image: url(../img/bgHome.png); background-repeat: no-repeat; background-size: 100% 100%; z-index: 100;}
+	#game {background-image: url(../img/bgPlay.png); background-repeat: no-repeat; background-size: 100% 100%; z-index: 100; display: none;}
+	#topPlayer {background-image: url(../img/bgTop.png); background-repeat: no-repeat; background-size: 100% 100%; z-index: 100; display: none;}
+	#topPlayer table {
+		    position: absolute;
+		left: 6%;
+		top: 20%;
+		padding: 0;
+		width: 87%;
+		text-align: center;
+		font-size: 198%;
+		font-weight: bold;
+		text-transform: none;
+		border: none;
+		overflow: hidden;
+		    table-layout:fixed;
+
+	}
+	#topPlayer table td{border: none; padding-bottom: 6%;}
+	#topPlayer table tr:nth-child(1){color: red;}
+	#topPlayer table tr:nth-child(7){color: #00ff00;}
+	#topPlayer table td:nth-child(1){ width: 17%; }
+	#topPlayer table td:nth-child(2){width: 61%;}
+	#topPlayer table td:nth-child(3){width: 29%; }
+	#topPlayer .loading{
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		text-align: center;
+		font-weight: bold;
+		color: green;
+		font-size: 260%;
+		text-transform: none;
+	}
+	#topPlayer .button{
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+	}
+	#topPlayer .bt-reload:active{
+		background-image: url(../img/reload-active.png);
+	}
+	#topPlayer .bt-back:active{
+		background-image: url(../img/menu-icon-active.png);
+	}
+	#topPlayer .bt-back{
+		left: 16%;
+		bottom: 5%;
+		width: 22%;
+		height: 13%;
+		border-radius: 70px;
+		background-image: url(../img/menu-icon.png);
+	}
+	#topPlayer .bt-reload{
+		right: 15%;
+		bottom: 4%;
+		width: 25%;
+		height: 14%;
+		border-radius: 70px;
+		background-image: url(../img/reload.png);
+
+	}
+
+	.screen{
+		
+	}
+	.button{
+		/* border: 1px solid #000; */
+		position:absolute;
+		/* opacity: 0.5; */
+		transition: opacity .25s ease-in-out;
+		-moz-transition: opacity .25s ease-in-out;
+		-webkit-transition: opacity .25s ease-in-out;
+		background: transparent;
+		
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		z-index: 15;
+	}
+	
+	.button:active {
+		/* background: #000; */
+		/* opacity: 0.5; */
+		color:#000;
+        -webkit-transition: background 0.5s linear;
+        -moz-transition: background 0.5s linear;
+        -ms-transition: background 0.5s linear;
+        -o-transition: background 0.5s linear;
+        transition: background 0.5s linear;
+	}
+	#home .button {
+	  opacity: 0.5;
+	}
+	#home .button:active {
+		background: #000;
+		opacity: 0.5;
+		
+	}
+	#game .button{
+		transition: background-image 0.5s;
+	}
+	
+	.sound-off{
+		background-image: url("../img/mute.png") !important;
+		
+	}
+	#home #btn-play{ 
+		left: 28%; top: 44%;
+		width: 44%; height: 12%; border-radius: 15px; }
+	#home #btn-sound{ 
+		    right: 2%; top: 1%; 
+			width: 18%; height: 11%; border-radius: 40px; }
+	#home #btn-add-point{ 
+		        left: 0%; top: 0%;
+				width: 63%; height: 7%; border-radius: 9px;}
+	#home #btn-shop{ 
+		    left: 5%;top: 9%;
+			width: 21%; height: 12%; border-radius: 40px; }
+	#home #btn-rate{ 
+		        left: 4%; bottom: 12%; 
+		width: 20%; height: 12%; border-radius: 40px; }
+	#home #btn-top{ 
+		        left: 40%; bottom: 12%; 
+				width: 20%; height: 12%; border-radius: 40px; }
+	#home #btn-back{ 
+		        right: 4%; bottom: 11%; 
+				width: 20%; height: 12%; border-radius: 70px; }
+	
+	
+	#game #bt-add-point{ 
+				left: 0%; top: 0.5%;
+				width: 63%; height: 9%;
+				border-radius: 9px;
+				background-image: url(../img/blance-frame.png);
+				}
+	#game #bt-add-point:active{
+		background-image: url(../img/blance-frame-active.png);
+	}
+	.bt-sound{ 
+		right: 2%; top: 1%; 
+		width: 18%; height: 11%; border-radius: 40px; 
+		background-image: url(../img/sound.png);
+	}
+	.bt-sound:active{
+		background-image: url(../img/sound-active.png);
+	}
+	#game #bt-back{
+		left: 2%; top: 35%; 
+		width: 19%; height: 11%;
+		background-image: url(../img/menu-icon.png);
+	}
+	#game #bt-back:active{
+		background-image: url(../img/menu-icon-active.png);
+	}
+	#game #bt-top{
+		right: 2%; top: 35%;
+		width: 19%; height: 11%;
+		border-radius: 40px;
+		background-image: url(../img/top-icon.png);
+	}
+	
+	#game #bt-top:active{
+		background-image: url(../img/top-icon-active.png);
+	}
+	#game #bt-shake{
+		left: 36%; bottom: 11%;
+		width: 28%; height: 8%;
+		background-image: url(../img/btnXoc.png);
+	}
+	#game #bt-open{
+		left: 36%; bottom: 11%;
+		width: 28%; height: 8%;
+		background-image: url(../img/btnOpen.png);
+		display: none;
+	}
+	#game .dat{
+		position: absolute;
+		/* border: 1px solid #000; */
+		width: 27%; height: 15%;
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		z-index: 4;
+	}
+	
+	#game .ruby{
+		position: absolute;
+		/* border: 1px solid #000; */
+		width: 25%; height: 15.5%;
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		background-image: url(../img/xac-ga.png);
+		z-index: 2;
+	}
+	#game #ruby1{ top: 9.5%; left: 26.5%; }
+	#game #ruby2{ top: 15%; left: 58.5%; }
+	#game #ruby3{ top: 26.5%; left: 32%; }
+	
+	#game .dat-nai{left: 7%; top: 44.5%; background-image: url(../img/dat-nai.png); }
+	#game .dat-bau{left: 36.5%; top: 44.5%; background-image: url(../img/dat-bau.png);}
+	#game .dat-ga{left: 65.5%; top: 44.5%; background-image: url(../img/dat-ga.png); }
+	#game .dat-ca{left: 7%; top: 61%;}
+	#game .dat-cua{left: 36%; top: 61%;}
+	#game .dat-tom{left: 65%; top: 61%;}
+	#game .dat-cuoc{
+		position: absolute;
+		background-image: url(../img/barPick.png); 
+		background-repeat: no-repeat;
+		background-size: 100% 100%; z-index: 100;
+		width: 92%;
+		height: 15%;
+		bottom: 0%;
+		left: 0%;
+		/* border: 1px solid yellow; */
+	}
+	#game .dat-cuoc{display: none;}
+	#game .dat-cuoc .close{
+		position: absolute;
+		top: 0%;
+		left: 0%;
+		width: 16%;
+		height: 57%;
+		/* border: 1px solid yellow; */
+		border-radius: 50px;
+	}
+	#game .dat-cuoc .add{
+		position: absolute;
+		top: 40%;
+		right: 0%;
+		width: 12%;
+		height: 39%;
+		/* border: 1px solid red; */
+		border-radius: 50px;
+	}
+	#game .dat-cuoc .wrapper{
+		position: absolute;
+		top: 36%;
+		left: 9%;
+		width: 78%;
+		height: 58%;
+		/* border: 1px solid red;*/
+		overflow: hidden;
+		overflow-y: hidden;
+		overflow-x: scroll;
+	}
+	#game .dat-cuoc .inner{
+		width: 140%;
+		float: left;
+		/* border: 1px solid yellow; */
+		height: 100%;
+	}
+	#game .dat-cuoc .dongxu{
+		background-image: url(../img/dongxu.png);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		z-index: 100;
+		width: 14%;
+		height: 68%;
+		float: left;
+		margin-right: 2%;
+		margin-top: 3px;
+		text-align: center;
+		font-weight: bold;
+		font-size: 213%;
+		color: #fff;
+		padding-top: 3%;
+		
+	}
+	#game .dat-cuoc .selected{
+		color: #00ff00;
+	}
+	::-webkit-scrollbar { 
+		display: none; 
+	}
+	.ts-inner{
+		float: left;
+		margin-left: 17%;
+		text-align: center;
+		width: 32%;
+		font-size: 200%;
+		color: #fff;
+		padding-top: 2%;
+		font-weight: bold;
+		z-index: 999;
+		height: 5%;
+		position: absolute;
+		
+	}
+	#game .ts-inner{
+		float: left;
+		margin-left: 30%;
+		text-align: center;
+		width: 48%;
+		font-size: 200%;
+		color: #fff;
+		padding-top: 2%;
+		font-weight: bold;
+		z-index: 999;
+		height: 62%;
+	}
+	body  .dat-tien{
+		display: none;
+		position: absolute;
+		width: 59%;
+		height: 50%;
+		bottom: 7%;
+		right: 2%;
+		background-image: url(../img/dongxu.png);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		font-size: 290%;
+		font-weight: bold;
+		color: #fff;
+		text-align: center;
+		padding-top: 9%;
+	}
+	#game .dat .dat-tien{
+		display: none;
+		position: absolute;
+		width: 59%;
+		height: 50%;
+		bottom: 7%;
+		right: 2%;
+		background-image: url(../img/dongxu.png);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		font-size: 290%;
+		font-weight: bold;
+		color: #fff;
+		text-align: center;
+		padding-top: 9%;
+	}
+	#game .disc-o{
+		
+	}
+	#game .disc-o .xu{
+		    position: absolute;
+		width: 16%;
+		height: 8%;
+		top: 25%;
+		left: 42%;
+		background-image: url(../img/dongxu.png);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		font-size: 290%;
+		font-weight: bold;
+		color: #fff;
+		text-align: center;
+		padding-top: 2%;
+		z-index: 15;
+	}
+	#game .discClose
+	{
+		background-image: url(../img/disc-c.png);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		position: absolute;
+		bottom: 0%;
+		left: 7%;
+		width: 89%;
+		height: 48%;
+		z-index: 3;
+		display: none;
+	}
+	.message {
+		display: none;
+		width: 80%;
+		left: 10%;
+		height: 6%;
+		top: 60%;
+		border: 2px solid #07401e;
+		background: #fff;
+		position: absolute;
+		font-size: 200%;
+		font-weight: bold;
+		text-align: center;
+		color: red;
+		border-radius: 18px;
+		text-transform: none;
+		padding-top: 2%;
+		-webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+		-moz-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+		box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+	}
+	.gmode{
+		background: #fff;
+		width: 1px;
+		height: 1px;
+		position: absolute;
+		top:0%;
+		right: 0%;
+		display: none;
+	}
+/* Fixing */	
+.ui-loader{display: none !important;}
+	
+	
+	#login .login-form{
+	
+	position: absolute;
+	width: 80%; margin-left: -40%;
+	height: 40%; margin-top: -40%;
+	left: 50%;
+	top: 50%;
+}
+#login .login-form input{
+	width: 80%;
+	padding: 5% 10%;
+	font-size: 150%;
+	margin-bottom: 5%;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+}
+#login .login-form input[type="submit"]{
+	width: 100%;
+}
