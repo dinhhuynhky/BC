@@ -28,7 +28,7 @@
   <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1"/>
   <icon src="icon.png"/>
   <platform name="android">
-    <icon src="www/res/icon/android/Icon-hdpi.png" density="ldpi"/>
+    <icon src="www/res/icon/android/Icon-ldpi.png" density="ldpi"/>
     <icon src="www/res/icon/android/Icon-mdpi.png" density="mdpi"/>
     <icon src="www/res/icon/android/Icon-hdpi.png" density="hdpi"/>
     <icon src="www/res/icon/android/Icon-xhdpi.png" density="xhdpi"/>
