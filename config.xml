@@ -29,11 +29,12 @@
   <icon src="icon.png"/>
   <platform name="android">
     
-	<icon src="www/res/icon/android/drawable-ldpi-icon.png" platform="android" qualifier="ldpi" />
-	<icon src="www/res/icon/android/drawable-mdpi-icon.png" platform="android" qualifier="mdpi" />
-	<icon src="www/res/icon/android/drawable-hdpi-icon.png" platform="android" qualifier="hdpi" />
-	<icon src="www/res/icon/android/drawable-xhdpi-icon.png" platform="android" qualifier="xhdpi" />
-	<icon src="www/res/icon/android/drawable-xxhdpi-icon.png" platform="android" qualifier="xxhdpi" />
+	<icon src="www/res/icon/android/ldpi.png" platform="android" qualifier="ldpi" />
+	<icon src="www/res/icon/android/mdpi.png" platform="android" qualifier="mdpi" />
+	<icon src="www/res/icon/android/hdpi.png" platform="android" qualifier="hdpi" />
+	<icon src="www/res/icon/android/xhdpi.png" platform="android" qualifier="xhdpi" />
+	<icon src="www/res/icon/android/xxhdpi.png" platform="android" qualifier="xxhdpi" />
+	<icon src="www/res/icon/android/xxxhdpi.png" platform="android" qualifier="xxxhdpi" />
 	
     <splash src="www/res/screen/android/drawable-land-ldpi-screen.png" density="land-ldpi"/>
     <splash src="www/res/screen/android/drawable-land-mdpi-screen.png" density="land-mdpi"/>
