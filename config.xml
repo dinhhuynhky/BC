@@ -1,6 +1,6 @@
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.atsolut.bc2016" version="1.0.0">
-  <name>BC2016</name>
-  <description>BC2016</description>
+  <name>Bầu Cua</name>
+  <description>Bầu Cua</description>
   <author href="http://phonegap.com" email="support@bc2016.com">bc2016</author>
   <content src="index.html"/>
   <preference name="DisallowOverscroll" value="true"/>
