@@ -31,21 +31,25 @@ function playBackgroundSound()
 {
 	if (typeof(Media) !== 'undefined') 
 	{
-		bgSound = new Media("/android_asset/www/sound/bg.mp3",
-				function onSuccess() {
-					// release the media resource once finished playing
-					bgSound.release();
-				},
-				function onError(e){
-					console.log("error playing sound: " + JSON.stringify(e));
-				});
-			bgSound.play();
-			myInterval = setInterval(function(){ 
-			
-			bgSound.play();
-			}, 
-			15000
-		);
+		var s_url = "/android_asset/www/sound/bg.mp3";
+		if (device.platform != "Android") 
+		{
+		 s_url = "bg.mp3";
+		}
+		bgSound = new Media(s_url,
+					function onSuccess() {
+						// release the media resource once finished playing
+						bgSound.release();
+					},
+					function onError(e){
+						console.log("error playing sound: " + JSON.stringify(e));
+					});
+		bgSound.play();
+		myInterval = setInterval(function(){ 
+				
+				bgSound.play();
+				}, 
+				15000);
 	}
 }
 function onDeviceReady() {
