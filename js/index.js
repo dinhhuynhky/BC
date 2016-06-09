@@ -34,7 +34,7 @@ function playBackgroundSound()
 		var s_url = "/android_asset/www/sound/bg.mp3";
 		if (device.platform != "Android") 
 		{
-		 s_url = "http://bc2016.chaobe.com/bg.mp3";
+		 s_url = "http://bc2016.chaobe.com/sound/bg.mp3";
 		}
 		bgSound = new Media(s_url,
 					function onSuccess() {
@@ -835,7 +835,11 @@ var dat_sound;
 var xoc_sound;
 function soundInit() {
 	var path = "/android_asset/www/";
-    bg_sound =  new Media(path + "sound/bg.mp3");
+    if (device.platform != "Android") 
+	{
+		path = "http://bc2016.chaobe.com/"	
+	}
+	bg_sound =  new Media(path + "sound/bg.mp3");
     dat_sound = new Media(path + "sound/dat.mp3");
     xoc_sound = new Media(path + "sound/xoc.mp3");
 }
