@@ -846,12 +846,13 @@ function soundInit() {
 
 function playAudio(src) {
     // Phonegap media
-    if (typeof Media != "undefined") {
+	if (typeof Media != "undefined") {
+
 		src = '/android_asset/www/' + src;
-        // Android needs the search path explicitly specified
-        if (device.platform == 'Android') {
-            
-        }
+        if (device.platform != "Android") 
+		{
+			src = "http://bc2016.chaobe.com/" + src;
+		}
         var mediaRes = new Media(src,
             function onSuccess() {
                 // release the media resource once finished playing
