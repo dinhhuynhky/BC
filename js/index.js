@@ -34,7 +34,7 @@ function playBackgroundSound()
 		var s_url = "/android_asset/www/sound/bg.mp3";
 		if (device.platform != "Android") 
 		{
-		 s_url = "bg.mp3";
+		 s_url = "sound/bg.mp3";
 		}
 		bgSound = new Media(s_url,
 					function onSuccess() {
