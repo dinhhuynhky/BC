@@ -1,7 +1,7 @@
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.atsolut.bc2016" version="1.0.0">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.gamexocdianet.bc2016" version="1.0.0">
   <name>Bầu Cua</name>
   <description>Bầu Cua</description>
-  <author href="http://phonegap.com" email="support@bc2016.com">bc2016</author>
+  <author href="http://phonegap.com" email="gamexocdia.net@gmail.com">Pham Van Hai</author>
   <content src="index.html"/>
   <preference name="DisallowOverscroll" value="true"/>
   <preference name="fullscreen" value="true" /> 
