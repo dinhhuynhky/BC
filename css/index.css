@@ -310,14 +310,15 @@ body {
 	}
 	#game .ts-inner{
 		float: left;
-		margin-left: 30%;
+		margin-left: 13%;
 		text-align: center;
 		width: 48%;
 		font-size: 200%;
-		color: #fff;
-		padding-top: 2%;
+		color: #f9f9f9;
+		padding-top: 4%;
 		font-weight: bold;
 		z-index: 999;
+		text-shadow: 1px 1px #000000;
 		height: 62%;
 	}
 	body  .dat-tien{
