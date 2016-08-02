@@ -584,7 +584,7 @@ $(".dat").on("click",function(){
 			display: "none",
 			bottom: "0"
 		}).animate({
-			bottom: "9%",
+			bottom: "4%",
 			display: "block",
 		}, 
 		200, 
