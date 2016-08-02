@@ -186,12 +186,12 @@ body {
 		background-image: url(../img/top-icon-active.png);
 	}
 	#game #bt-shake{
-		left: 36%; bottom: 11%;
+		left: 36%; bottom: 7%;
 		width: 28%; height: 8%;
 		background-image: url(../img/btnXoc.png);
 	}
 	#game #bt-open{
-		left: 36%; bottom: 11%;
+		left: 36%; bottom: 7%;
 		width: 28%; height: 8%;
 		background-image: url(../img/btnOpen.png);
 		display: none;
@@ -218,12 +218,12 @@ body {
 	#game #ruby2{ top: 15%; left: 58.5%; }
 	#game #ruby3{ top: 26.5%; left: 32%; }
 	
-	#game .dat-nai{left: 7%; top: 44.5%; background-image: url(../img/dat-nai.png); }
-	#game .dat-bau{left: 36.5%; top: 44.5%; background-image: url(../img/dat-bau.png);}
-	#game .dat-ga{left: 65.5%; top: 44.5%; background-image: url(../img/dat-ga.png); }
-	#game .dat-ca{left: 7%; top: 61%;}
-	#game .dat-cua{left: 36%; top: 61%;}
-	#game .dat-tom{left: 65%; top: 61%;}
+	#game .dat-nai{left: 7%; top: 49%; background-image: url(../img/dat-nai.png); }
+	#game .dat-bau{left: 36.5%; top: 49%; background-image: url(../img/dat-bau.png);}
+	#game .dat-ga{left: 65.5%; top: 49%; background-image: url(../img/dat-ga.png); }
+	#game .dat-ca{left: 7%; top: 66%;}
+	#game .dat-cua{left: 36%; top: 66%;}
+	#game .dat-tom{left: 65%; top: 66%;}
 	#game .dat-cuoc{
 		position: absolute;
 		background-image: url(../img/barPick.png); 
@@ -310,14 +310,15 @@ body {
 	}
 	#game .ts-inner{
 		float: left;
-		margin-left: 30%;
+		margin-left: 13%;
 		text-align: center;
 		width: 48%;
 		font-size: 200%;
-		color: #fff;
-		padding-top: 2%;
+		color: #f9f9f9;
+		padding-top: 4%;
 		font-weight: bold;
 		z-index: 999;
+		text-shadow: 1px 1px #000000;
 		height: 62%;
 	}
 	body  .dat-tien{
@@ -403,6 +404,7 @@ body {
 		-webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
 		-moz-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
 		box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+		z-index:15;
 	}
 	.gmode{
 		background: #fff;
